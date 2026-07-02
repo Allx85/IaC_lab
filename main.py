@@ -6,7 +6,7 @@ files = (os.listdir(path))
 
 print(f"You have {len(files)} files in Downloads")
 
-f = 0
+
 total_bytes = sum(
         os.path.getsize(os.path.join(path,f))
         for f in files
