@@ -2,13 +2,13 @@ import os
 
 path = os.path.expanduser("~/Downloads")
 
-files = (os.listdir(path))
-
-if os.path.exists(path):
-    files = (os.listdir(path))
-    print(f"You have {len(files)} files in Downloads folder")
-else:
-    print("The directory does not exist")
+try:
+        files = (os.listdir(path))
+except FileNotFoundError:
+        print("Downloads folder cannot be found.")
+        exit(1)
+       
+print(f"You have {len(files)} files in Downloads folder")
 
 total_bytes = sum(
         os.path.getsize(os.path.join(path,f))
