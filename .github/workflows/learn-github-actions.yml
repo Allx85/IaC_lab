@@ -1,8 +1,9 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  runs-on: ubuntu-latest
+  print-helloWorld:
+    runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v6
-    - run: echo "Hello World"
+    steps:
+      - uses: actions/checkout@v6
+      - run: echo "Hello World"
