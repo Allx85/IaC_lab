@@ -4,8 +4,11 @@ path = os.path.expanduser("~/Downloads")
 
 files = (os.listdir(path))
 
-print(f"You have {len(files)} files in Downloads folder")
-
+if os.path.exists(path):
+    files = (os.listdir(path))
+    print(f"You have {len(files)} files in Downloads folder")
+else:
+    print("The directory does not exist")
 
 total_bytes = sum(
         os.path.getsize(os.path.join(path,f))
