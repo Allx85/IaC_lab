@@ -7,3 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - run: echo "Hello World"
+  
+  Joni-for-sparken:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Joni for sparken"
