@@ -1,15 +1,24 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  print-helloWorld:
+  print-HelloWorld:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v6
       - run: echo "Hello World"
   
-  Joni-for-sparken:
+  run-python-code:
+    
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Joni for sparken"
+      - uses: actions/checkout@v6
+      - name: Set up Python
+
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      - name: run program
+        run: python main.py
